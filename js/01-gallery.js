@@ -36,10 +36,6 @@ function onImgClick (evt) {
     if (evt.target.nodeName !== 'IMG')
         return;
     
-    const isItemImage = evt.target.classList.contains('.gallery__image');
-    if (!isItemImage)
-        return;
-    
     const currentImgUrl = evt.target.dataset.source;
 
     const instance = basicLightbox.create(`<img src = '${currentImgUrl}' width='1280' height='auto'/> `,
