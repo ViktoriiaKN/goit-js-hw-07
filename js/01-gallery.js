@@ -5,15 +5,15 @@ const galleryContainer = document.querySelector('.gallery');
 // Створюємо масив galleryItems
 const itemsMarkup = createGalleryItemsMarkup(galleryItems);
 // Вставляємо після всіх дітей
-galleryContainer.insertAdjacentHTML('beforeend', itemsMarkup);
+galleryContainer.insertAdjacentHTML('beforeend',itemsMarkup);
 console.log(galleryContainer);
 // Додаємо прослуховувач на подію
-galleryContainer.addEventListener('click', onImgClick);
+galleryContainer.addEventListener('click',onImgClick);
 
 
 // Rendered items
 function createGalleryItemsMarkup(items) {
-    return items.map(({ preview, original, description }) => {
+    return items.map(({ preview,original,description }) => {
         return `<div class='gallery__item'> 
         <a class="gallery__link" href="${original}">
     <img
@@ -24,8 +24,8 @@ function createGalleryItemsMarkup(items) {
     />
   </a>
   </div>`;
-    });
-    join('');
+    })
+    .join('');
 };
 
 
